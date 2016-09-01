@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Gif">
+      <UniqueIdentifier>{5d262a78-8552-4d2a-a3cd-1a486d13fed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\YMRichText">
+      <UniqueIdentifier>{a41d3c96-bb07-474c-94aa-052afe4cecd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Gif\gif_lib">
+      <UniqueIdentifier>{904bf03d-4300-4d0e-9d18-b1c690a10078}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\Bitmap.cpp">
+      <Filter>src\Gif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\CacheGif.cpp">
+      <Filter>src\Gif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\GifBase.cpp">
+      <Filter>src\Gif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\GifMovie.cpp">
+      <Filter>src\Gif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\InstantGif.cpp">
+      <Filter>src\Gif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\Movie.cpp">
+      <Filter>src\Gif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\gif_lib\gif_err.c">
+      <Filter>src\Gif\gif_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\gif_lib\gif_font.c">
+      <Filter>src\Gif\gif_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\gif_lib\gif_hash.c">
+      <Filter>src\Gif\gif_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\gif_lib\gifalloc.c">
+      <Filter>src\Gif\gif_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\gif_lib\quantize.c">
+      <Filter>src\Gif\gif_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Gif\gif_lib\dgif_lib.c">
+      <Filter>src\Gif\gif_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\YMRichText\YMBubbleText..cpp">
+      <Filter>src\YMRichText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\YMRichText\YMLinkText.cpp">
+      <Filter>src\YMRichText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\YMRichText\YMMessage.cpp">
+      <Filter>src\YMRichText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\YMRichText\YMRichText.cpp">
+      <Filter>src\YMRichText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\YMRichText\YMStringElement.cpp">
+      <Filter>src\YMRichText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\YMRichText\YMStringParser.cpp">
+      <Filter>src\YMRichText</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\Bitmap.h">
+      <Filter>src\Gif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\CacheGif.h">
+      <Filter>src\Gif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\GifBase.h">
+      <Filter>src\Gif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\GifMacros.h">
+      <Filter>src\Gif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\GIFMovie.h">
+      <Filter>src\Gif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\GifUtils.h">
+      <Filter>src\Gif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\InstantGif.h">
+      <Filter>src\Gif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\Movie.h">
+      <Filter>src\Gif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\gif_lib\gif_hash.h">
+      <Filter>src\Gif\gif_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\gif_lib\gif_lib.h">
+      <Filter>src\Gif\gif_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Gif\gif_lib\gif_lib_private.h">
+      <Filter>src\Gif\gif_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\YMRichText\YMBubbleText.h">
+      <Filter>src\YMRichText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\YMRichText\YMLinkText.h">
+      <Filter>src\YMRichText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\YMRichText\YMMessage.h">
+      <Filter>src\YMRichText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\YMRichText\YMRichText.h">
+      <Filter>src\YMRichText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\YMRichText\YMStringElement.h">
+      <Filter>src\YMRichText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\YMRichText\YMStringParser.h">
+      <Filter>src\YMRichText</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
