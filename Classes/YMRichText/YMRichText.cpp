@@ -7,9 +7,10 @@
 //
 #include "YMRichText.h"
 #include <float.h>
+#include "YMLinkText.h"
 #include "Gif/InstantGif.h"
 #include "Gif/GifBase.h"
-#include "YMLinkText.h"
+
 
 YMRichText::YMRichText():
 	_dirty(true),
@@ -86,7 +87,7 @@ void YMRichText::formateText()
 		addNewLine();
 		for(YMStringElement* element: result)
 		{
-			CCLOG(element->toString().c_str());
+			CCLOG("%s",element->toString().c_str());
 			switch (element->type()) {
 			case YMStringType::YMString_text:
 				handerLabelElement(element);
@@ -222,7 +223,7 @@ void YMRichText::handerLabelElement(YMStringElement* element)
     else
     {
 		// 转来转去的，效率有点堪忧
-		std::string utf8String;
+		std::string utf8String = "";
 		std::u16string utf16String;
 		if (!StringUtils::UTF8ToUTF16(contentStr, utf16String))
 		{
@@ -230,12 +231,15 @@ void YMRichText::handerLabelElement(YMStringElement* element)
 		}
 		// 拆分换行
         for (int i = 0;  i < utf16String.size(); ++i) {
+            // 转换前必须治空
+            utf8String = "";
 			if (StringUtils::UTF16ToUTF8(utf16String.substr(i, 1), utf8String))
 			{
 				label->setString(utf8String);
 				Size size = label->getContentSize();
 				_leftSpace -= size.width;
 				if (_leftSpace < 0) {
+                    utf8String = "";
 					if (StringUtils::UTF16ToUTF8(utf16String.substr(0, i), utf8String))
 					{
 						label->setString(utf8String);
@@ -346,12 +350,14 @@ void YMRichText::handerLinkElement(YMStringElement* element)
 		}
 		// 拆分换行
 		for (int i = 0; i < utf16String.size(); ++i) {
+            utf8String = "";
 			if (StringUtils::UTF16ToUTF8(utf16String.substr(i, 1), utf8String))
 			{
 				label->setString(utf8String);
 				Size size = label->getContentSize();
 				_leftSpace -= size.width;
 				if (_leftSpace < 0) {
+                    utf8String = "";
 					if (StringUtils::UTF16ToUTF8(utf16String.substr(0, i), utf8String))
 					{
 						label->setString(utf8String);

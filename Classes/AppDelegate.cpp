@@ -57,8 +57,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);
     auto frameSize = glview->getFrameSize();
     // if the frame's height is larger than the height of medium size.
-
+#ifdef _WIN32
 	glview->setFrameSize(480, 800);
+#endif
     register_all_packages();
 
     // create a scene. it's an autorelease object

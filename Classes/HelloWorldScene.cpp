@@ -37,9 +37,11 @@ bool HelloWorld::init()
         return false;
     }
     
+    std::string a = FileUtils::getInstance()->fullPathForFilename("tip.png");
+    
 	// 添加搜索路径
-	FileUtils::getInstance()->addSearchPath("/emoj");
-	FileUtils::getInstance()->addSearchPath("/image");
+	FileUtils::getInstance()->addSearchPath("emoj");
+	FileUtils::getInstance()->addSearchPath("image");
 
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
@@ -205,7 +207,7 @@ ssize_t HelloWorld::numberOfCellsInTableView(TableView *table)
 
 void HelloWorld::showMessage(std::string message)
 {
-	YMBubbleText* bubbbleText = YMBubbleText::create(message);
+	YMBubbleText* bubbbleText = YMBubbleText::create("[/defs=36]" + message);
 	bubbbleText->setMaxLineWidth(300);
 	bubbbleText->setStretchableImage("tip.png", Rect(48, 33, 1, 1));
 	bubbbleText->setOffset(Rect(10, 10, 10, 10));
