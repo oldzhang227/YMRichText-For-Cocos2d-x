@@ -1,4 +1,4 @@
-#ifndef __HELLOWORLD_SCENE_H__
+ï»¿#ifndef __HELLOWORLD_SCENE_H__
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
@@ -24,7 +24,7 @@ public:
     CREATE_FUNC(HelloWorld);
 
 
-	// µã»÷ÊÂ¼ş
+	// ç‚¹å‡»äº‹ä»¶
 	void clickYMLinkTextCallBack(const std::string& linkData);
 
 	// TabelView
@@ -34,7 +34,7 @@ public:
 
 	virtual ssize_t numberOfCellsInTableView(TableView *table);
 
-	// ÏÔÊ¾ÏûÏ¢ÌáÊ¾
+	// æ˜¾ç¤ºæ¶ˆæ¯æç¤º
 	void showMessage(std::string message);
 private:
 

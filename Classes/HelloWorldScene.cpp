@@ -1,4 +1,4 @@
-#include "HelloWorldScene.h"
+ï»¿#include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 #include "YMRichText/YMRichText.h"
 #include "json/rapidjson.h"
@@ -37,13 +37,13 @@ bool HelloWorld::init()
         return false;
     }
     
-	// Ìí¼ÓËÑË÷Â·¾¶
+	// æ·»åŠ æœç´¢è·¯å¾„
 	FileUtils::getInstance()->addSearchPath("/emoj");
 	FileUtils::getInstance()->addSearchPath("/image");
 
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-	// ±³¾°Í¼
+	// èƒŒæ™¯å›¾
 	ImageView* backImage = ImageView::create("chat_bg.jpg");
 	backImage->ignoreContentAdaptWithSize(false);
 	backImage->setAnchorPoint(Point::ZERO);
@@ -52,14 +52,14 @@ bool HelloWorld::init()
 	this->addChild(backImage);
 
 	std::string ymString = FileUtils::getInstance()->getStringFromFile("text.txt");
-	// ¼ÆËã¸ß¶È
+	// è®¡ç®—é«˜åº¦
 	YMBubbleText* bubbbleText = YMBubbleText::create(ymString);
 	bubbbleText->setMaxLineWidth(visibleSize.width - HEAD_SIZE * 2 - 30);
 	bubbbleText->setStretchableImage("chatfrom_bg_normal.png", Rect(40, 60, 1, 1));
 	bubbbleText->setOffset(Rect(20,10,10,10));
 	bubbbleText->adjustFrame();
 	float h = bubbbleText->getContentSize().height;
-	// ¹¹ÔìÊı¾İ
+	// æ„é€ æ•°æ®
 	for (int i = 0; i < 10; i++)
 	{
 		YMMessage* message = YMMessage::create(ymString);
@@ -73,7 +73,7 @@ bool HelloWorld::init()
 			_ymMessages.pushBack(message);
 		}
 	}
-	// ÏÔÊ¾ÁĞ±í
+	// æ˜¾ç¤ºåˆ—è¡¨
 	TableView* tableView = TableView::create(this, visibleSize);
 	tableView->setDirection(TableView::Direction::VERTICAL);
 	tableView->setAnchorPoint(Point::ZERO);
@@ -158,11 +158,11 @@ TableViewCell* HelloWorld::tableCellAtIndex(TableView *table, ssize_t idx)
 	float bubbleWidth = tableWidth - HEAD_SIZE * 2 - 30;
 
 	YMMessage* message = _ymMessages.at(idx);
-	// ÆøÅİÎÄ±¾
+	// æ°”æ³¡æ–‡æœ¬
 	YMBubbleText* bubbleText = YMBubbleText::create(message->getYMString());
 	bubbleText->setMaxLineWidth(bubbleWidth);
 	bubbleText->addYMLinkTextClickListener(CC_CALLBACK_1(HelloWorld::clickYMLinkTextCallBack, this));
-	// Í·Ïñ
+	// å¤´åƒ
 	ImageView* head = nullptr;
 	if (message->isLeft())
 	{
